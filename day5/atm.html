@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ATM System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      padding: 30px;
+    }
+    .box {
+      max-width: 400px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    h2 {
+      text-align: center;
+    }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+    }
+    button {
+      cursor: pointer;
+    }
+    .hidden {
+      display: none;
+    }
+    .msg {
+      margin-top: 10px;
+      padding: 10px;
+      background: #eee;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- LOGIN -->
+  <div class="box" id="loginBox">
+    <h2>ATM Login</h2>
+    <input type="password" id="pinInput" placeholder="Enter PIN">
+    <button onclick="login()">Login</button>
+    <div class="msg" id="loginMsg"></div>
+  </div>
+
+  <!-- ATM MENU -->
+  <div class="box hidden" id="atmBox">
+    <h2>ATM Menu</h2>
+
+    <button onclick="checkBalance()">Check Balance</button>
+
+    <input type="number" id="withdrawAmount" placeholder="Withdraw amount">
+    <button onclick="withdraw()">Withdraw</button>
+
+    <input type="number" id="depositAmount" placeholder="Deposit amount">
+    <button onclick="deposit()">Deposit</button>
+
+    <button onclick="logout()">Logout</button>
+
+    <div class="msg" id="atmMsg"></div>
+  </div>
+
+  <!-- LINK JS FILE -->
+  <script src="atm.js"></script>
+</body>
+</html>
